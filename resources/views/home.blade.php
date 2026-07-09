@@ -6,40 +6,40 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>PT Bina Sukses Valasindo</title>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
     <header class="bg-blue-600 text-white py-3 mb-4">
-        <div class="container text-center">
-            <h1 class="text-5xl">PT Bina Sukses Valasindo</h1>
-            <p class="text-xl">Layanan Penukaran Valuta Asing Terpecaya</p>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-verdana text-[32px] font-bold">PT Bina Sukses Valasindo</h1>
+            <p class="font-verdana text-[14px]">Layanan Penukaran Valuta Asing Terpercaya</p>
         </div>
     </header>
-    <div class="container">
-        <h2 class="text-center mb-4 text-4xl">Kurs Hari Ini</h2>
+    <div class="container mx-auto px-4">
+        <h2 class="text-center mb-4 font-verdana text-[32px]">Kurs Hari Ini</h2>
         <div>
-            <p class="text-2xl font-bold text-right mb-4">Terakhir diperbarui : </p>
+            <p class="font-bold text-right mb-4 font-verdana text-[27px]">Terakhir diperbarui : </p>
             <div class="flex justify-center">
-                <table class="table border-collapse text-center mb-4">
+                <table class="w-[91%] border-collapse text-center mb-4 border border-slate-300 font-verdana text-[32px]">
                     <thead>
-                        <tr class="text-4xl">
-                            <th class="bg-[rgb(220,53,69)] text-white">MATA UANG</th>
-                            <th class="bg-[rgb(118,117,125)] text-white">PECAHAN</th>
-                            <th class="bg-[rgb(255,193,7)] p-1">BELI</th>
-                            <th class="bg-[rgb(25,135,84)] p-2">JUAL</th>
+                        <tr class="font-bold">
+                            <th class="bg-[rgb(220,53,69)] text-white border border-slate-300 p-1 align-middle">MATA UANG</th>
+                            <th class="bg-[rgb(118,117,125)] text-white border border-slate-300 p-1 align-middle">PECAHAN</th>
+                            <th class="bg-[rgb(255,193,7)] text-black border border-slate-300 p-1 align-middle">BELI</th>
+                            <th class="bg-[rgb(25,135,84)] text-black border border-slate-300 p-1 align-middle">JUAL</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="text-4xl">
-                            <td>
+                        <tr class="font-verdana text-[32px] font-bold">
+                            <td class="border border-slate-300 p-2 align-middle">
 
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="text-center text-4xl text-[rgb(220,53,69)]">
+            <div class="text-center font-verdana text-[32px] font-bold text-[rgb(220,53,69)]">
                 <b>HARGA SEWAKTU-WAKTU DAPAT BERUBAH</b>
                 <br>
-                <b>UNTUK KETERSEDIAAN STOK KONFIRMASI TERLEBIH DAHULU!</b>
+                <b>UNTUK KETERSEDIAAN STOK HARAP KONFIRMASI TERLEBIH DAHULU!</b>
             </div>
         </div>
     </div>
