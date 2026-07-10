@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('mata_uang');
             $table->string('pecahan');
-            $table->decimal('beli');
-            $table->decimal('jual');
+            $table->string('beli');
+            $table->string('jual');
             $table->timestamps();
         });
     }

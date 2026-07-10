@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Upload;
 use Illuminate\Http\Request;
+use App\Imports\UploadImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UploadController extends Controller
 {
@@ -21,7 +23,7 @@ class UploadController extends Controller
      */
     public function create()
     {
-       //
+       return view('upload.index');
     }
 
     /**
@@ -29,7 +31,13 @@ class UploadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'file' => 'required|mimes:xlsx,xls,csv|max:2048',
+        ]);
+
+        Excel::import(new UploadImport, $request->file('file'));
+
+        return redirect()->route('upload.index')->with('success', 'Data Excel berhasil diimport!');
     }
 
     /**
@@ -37,7 +45,7 @@ class UploadController extends Controller
      */
     public function show(Upload $upload)
     {
-        //
+        return view('upload.index');
     }
 
     /**
