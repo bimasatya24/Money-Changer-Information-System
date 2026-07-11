@@ -35,6 +35,8 @@ class UploadController extends Controller
             'file' => 'required|mimes:xlsx,xls,csv|max:2048',
         ]);
 
+        Upload::truncate();
+
         Excel::import(new UploadImport, $request->file('file'));
 
         return redirect()->route('upload.index')->with('success', 'Data Excel berhasil diimport!');
