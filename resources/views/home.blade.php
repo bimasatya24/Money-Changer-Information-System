@@ -15,7 +15,19 @@
                     </thead>
                     <tbody>
                         @foreach ($allUpload as $r)
-                        <tr class="font-verdana text-[32px] font-bold">
+                        @php
+                            $group = floor($loop->index / 5) % 5;
+
+                            $bgColor = match($group) {
+                                0 => 'bg-[#fff9c4]',
+                                1 => 'bg-[#c8e6c9]',
+                                2 => 'bg-[#b3e5fc]',
+                                3 => 'bg-[#ffccbc]',
+                                4 => 'bg-[#ffcc80]',
+                            };
+                        @endphp
+                        
+                        <tr class="{{ $bgColor }} font-verdana text-[32px] font-bold">
                             <td class="border border-slate-300 p-2 align-middle">
                                 {{ $r->mata_uang }}
                             </td>
