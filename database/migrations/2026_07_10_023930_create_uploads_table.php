@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->id();
-            $table->string('mata_uang');
-            $table->string('pecahan');
-            $table->string('beli');
-            $table->string('jual');
+            $table->string('MATA_UANG');
+            $table->string('PECAHAN');
+            $table->decimal('BELI', 10, 2);
+            $table->decimal('JUAL', 10, 2);
             $table->timestamps();
         });
     }

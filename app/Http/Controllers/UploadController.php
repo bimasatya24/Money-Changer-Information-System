@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\UploadExcelImport;
 use App\Models\Upload;
 use Illuminate\Http\Request;
-use App\Imports\UploadImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class UploadController extends Controller
@@ -37,7 +37,7 @@ class UploadController extends Controller
 
         Upload::truncate();
 
-        Excel::import(new UploadImport, $request->file('file'));
+        Excel::import(new UploadExcelImport(), $request->file('file'));
 
         return redirect()->route('upload.index')->with('success', 'Data Excel berhasil diimport!');
     }
